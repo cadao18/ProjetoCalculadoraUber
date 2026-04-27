@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/uber"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:text="CALCULADORA UBER"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- COLUNA DIREITA (ALINHAMENTO PERFEITO) -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45"/>
+
+    <!-- ===== CAMPOS ===== -->
+
+    <!-- HORAS -->
+    <TextView
+        android:id="@+id/textViewHoras"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="HORAS TRABALHADA"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView9" />
+
+    <EditText
+        android:id="@+id/EditTextHoras"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/white"
+        android:hint="Digite horas"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/textViewHoras"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionNext"/>/>
+
+    <!-- CONSUMO -->
+    <TextView
+        android:id="@+id/textViewConsumo"
+        android:text="CONSUMO"
+        android:textColor="@android:color/white"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/EditTextHoras"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextConsumo"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/white"
+        android:hint="Digite o consumo"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/textViewConsumo"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionNext"/>/>
+
+    <!-- OUTROS -->
+    <TextView
+        android:id="@+id/textViewCusto"
+        android:text="OUTROS CUSTOS"
+        android:textColor="@android:color/white"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextConsumo"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/EditTextOutros"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/white"
+        android:hint="Digite outro"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/textViewCusto"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionNext"/>/>
+
+    <!-- GANHO -->
+    <TextView
+        android:id="@+id/textViewGanho"
+        android:text="GANHOS DO DIA"
+        android:textColor="@android:color/white"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/EditTextOutros"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/EditTextGanhoTotal"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/white"
+        android:hint="Digite seu ganho total"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/textViewGanho"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionNext"/>/>
+
+
+    <!-- ALIMENTAÇÃO -->
+    <TextView
+        android:id="@+id/textViewAlimentacao"
+        android:text="ALIMENTAÇÃO"
+        android:textColor="@android:color/white"
+        android:layout_width="0dp"
+        android:paddingTop="98dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+
+        app:layout_constraintTop_toBottomOf="@id/EditTextGanhoTotal"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/EditTextAlimentacao"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="98dp"
+        android:background="@android:color/white"
+        android:hint="Gastos alimentação"
+
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/textViewAlimentacao"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionNext"/>/>
+
+    <!-- COMBUSTÍVEL -->
+    <TextView
+        android:id="@+id/textViewCombustivel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="PREÇO COMBUSTÍVEL"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EditTextAlimentacao" />
+
+    <EditText
+        android:id="@+id/EditTextCombustivel"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/white"
+        android:hint="Valor do combustível"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/textViewCombustivel"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionNext"/>/>
+
+    <!-- KM -->
+    <TextView
+        android:id="@+id/textViewKM"
+        android:text="KM RODADO"
+        android:textColor="@android:color/white"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/EditTextCombustivel"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/EditTextKM"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/white"
+        android:hint="Digite o km"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/textViewKM"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionDone"/>/>
+
+    <!-- BOTÕES -->
+
+    <Button
+        android:id="@+id/btnLimpar"
+        android:layout_width="174dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:imeOptions="actionDone"
+        android:text="Limpar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextKM" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnLimpar"
+        app:layout_constraintTop_toTopOf="@+id/btnLimpar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

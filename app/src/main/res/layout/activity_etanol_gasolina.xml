@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EtanolGasolinaActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        android:src="@drawable/uber"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/bntEtanolGasolina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="CALCULAR "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textResultado" />
+
+    <TextView
+        android:id="@+id/TextEtanolGasolina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="CALCULAR GASOLINA OU ETANOL"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:layout_editor_absoluteX="48dp" />
+
+    <EditText
+        android:id="@+id/editEtanol"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="56dp"
+        android:background="@android:color/white"
+        android:hint="qual valor do etanol?"
+        android:imeOptions="actionNext"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewEtanol" />
+
+    <EditText
+        android:id="@+id/editGasolina"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
+        android:background="@android:color/white"
+        android:hint="qual valor gasolina?"
+        android:imeOptions="actionNext"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewGasolina" />
+
+    <TextView
+        android:id="@+id/textViewEtanol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="ETANOL"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/editEtanol"
+        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextEtanolGasolina" />
+
+    <TextView
+        android:id="@+id/textViewGasolina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="GASOLINA"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/editGasolina"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEtanol" />
+
+    <TextView
+        android:id="@+id/textResultado"
+        android:layout_width="157dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="176dp"
+        android:background="@color/white"
+        android:text="RESULTADO"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editGasolina" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
