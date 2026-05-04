@@ -7,18 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".SalvarActivity">
 
-
+    <!-- IMAGEM DE FUNDO -->
     <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         android:src="@drawable/uber"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <TextView
         android:id="@+id/textViewRelatorio"
@@ -26,52 +27,60 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="RELATÓRIO MENSAL"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/txtTotalMes"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
         android:text="TOTAL DO MÊS: R$ 0.00"
         android:textColor="@color/white"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnVer" />
-
-    <TextView
-        android:id="@+id/txtDataLucro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
-        android:text="17/04/2026   R$220.00"
-        android:textAlignment="center"
-        android:textColor="@color/white"
         android:textSize="18sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toEndOf="@id/btnVer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+
+        app:layout_constraintTop_toBottomOf="@id/textViewRelatorio"
+        app:layout_constraintBottom_toTopOf="@id/txtTotalMes"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewRelatorio" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/containerDados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:rotationX="2">
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <Button
         android:id="@+id/btnVer"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="540dp"
+        android:backgroundTint="#276EF1"
         android:text="VER"
-        app:layout_constraintEnd_toStartOf="@+id/txtTotalMes"
+        android:textColor="@android:color/white"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDataLucro" />
-
-    <TextView
-        android:id="@+id/txtDetalhes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="16sp" />
-
+        app:layout_constraintEnd_toStartOf="@id/txtTotalMes"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

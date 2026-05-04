@@ -9,6 +9,7 @@
 
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -22,16 +23,16 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:text="CALCULADORA UBER"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:text="CALCULADORA UBER"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- COLUNA DIREITA (ALINHAMENTO PERFEITO) -->
     <androidx.constraintlayout.widget.Guideline
@@ -240,8 +241,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#276EF1"
         android:imeOptions="actionDone"
         android:text="Limpar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EditTextKM" />
 
@@ -249,6 +253,7 @@
         android:id="@+id/btnCalcular"
         android:layout_width="189dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#276EF1"
         android:text="Calcular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnLimpar"

@@ -13,14 +13,13 @@ import androidx.room.Room
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import android.widget.LinearLayout
 
 class SalvarActivity : AppCompatActivity() {
 
     private lateinit var banco: SalvarBanco
 
-    private lateinit var txtDataLucro: TextView
     private lateinit var txtTotalMes: TextView
-    private lateinit var txtDetalhes: TextView
     private lateinit var btnVer: Button
 
     @SuppressLint("MissingInflatedId")
@@ -35,10 +34,16 @@ class SalvarActivity : AppCompatActivity() {
             "banco_uber"
         ).build()
 
-        txtDataLucro = findViewById(R.id.txtDataLucro)
+
         txtTotalMes = findViewById(R.id.txtTotalMes)
-        txtDetalhes = findViewById(R.id.txtDetalhes)
+
         btnVer = findViewById(R.id.btnVer)
+        val container = findViewById<LinearLayout>(R.id.containerDados)
+
+        val item = TextView(this)
+        item.text = "17/04/2026   R$220.00"
+
+        container.addView(item)
 
         btnVer.setOnClickListener {
             lifecycleScope.launch {
@@ -47,21 +52,28 @@ class SalvarActivity : AppCompatActivity() {
                     banco.salvarDao().listarDias()
                 }
 
+                val container = findViewById<LinearLayout>(R.id.containerDados)
+                container.removeAllViews() // limpa antes
+
                 if (lista.isNotEmpty()) {
 
-                    val ultimo = lista.last()
                     val totalMes = lista.sumOf { it.lucro }
-
-                    txtDataLucro.text = "${ultimo.data}   R$ %.2f".format(ultimo.lucro)
-
                     txtTotalMes.text = "TOTAL DO MÊS: R$ %.2f".format(totalMes)
 
-                    txtDetalhes.text =
-                        "Valor por hora: R$ %.2f\nCombustível: R$ %.2f"
-                            .format(ultimo.porHora, ultimo.combustivel)
+                    lista.forEach { dia ->
+                        val item = TextView(this@SalvarActivity)
+                        item.text = "${dia.data}   R$ %.2f".format(dia.lucro)
+                        item.setTextColor(getColor(R.color.white))
+                        item.textSize = 18f
+
+                        container.addView(item)
+                    }
                 }
             }
         }
+
+
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

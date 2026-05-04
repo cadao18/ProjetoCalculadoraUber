@@ -8,14 +8,15 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         android:src="@drawable/uber"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 
@@ -27,7 +28,7 @@
         android:layout_marginTop="40dp"
         android:text="RESULTADO"
         android:textColor="@color/white"
-        android:textSize="34sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,13 +37,15 @@
     <!-- LUCRO -->
     <TextView
         android:id="@+id/txtLucro"
-        android:layout_width="350dp"
-        android:layout_height="55dp"
+        android:layout_width="340dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
         android:text="Lucro: R$ 0,00"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="34sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titulo" />
@@ -50,13 +53,15 @@
     <!-- GANHO POR HORA -->
     <TextView
         android:id="@+id/txtHora"
-        android:layout_width="420dp"
-        android:layout_height="55dp"
+        android:layout_width="335dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
         android:text="Por hora: R$ 0,00"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="34sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtLucro" />
@@ -66,8 +71,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
-        android:background="@color/white"
         android:text="SALVAR"
+        android:backgroundTint="#276EF1"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +86,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
+        android:backgroundTint="#276EF1"
         android:text="CALCULAR ETANOL OU GASOLINA"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bntSalvar" />

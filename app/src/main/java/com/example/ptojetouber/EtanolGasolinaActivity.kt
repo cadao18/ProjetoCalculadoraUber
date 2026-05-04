@@ -37,10 +37,10 @@
 
                     if(resultado <= 0.7){
                         textResultado.text = "ETANOL"
-                        textResultado.setTextColor(Color.GREEN)
+                        textResultado.setTextColor(Color.BLUE)
                     }else{
                         textResultado.text = "GASOLINA"
-                        textResultado.setTextColor(Color.GREEN)
+                        textResultado.setTextColor(Color.BLUE)
                     }
 
                 }else{
