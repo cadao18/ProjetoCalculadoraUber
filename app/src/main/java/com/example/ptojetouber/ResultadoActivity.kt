@@ -70,7 +70,7 @@ class ResultadoActivity : AppCompatActivity() {
                 try {
                     // 1. Cria o objeto para salvar
                     val registro = SalvarDia(
-                        data = "22/04/2026", // Ideal usar uma função de data atual
+                        data = " SimpleDateFormat", // Ideal usar uma função de data atual
                         lucro = lucro,
                         porHora = ganhoHora,
                         combustivel = 0.0
